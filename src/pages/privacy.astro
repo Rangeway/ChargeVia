@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Privacy — ChargeVia" description="How ChargeVia handles the email address you share for launch updates.">
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__logo" href="/" aria-label="ChargeVia home">
+        <img src="/lockup.svg" alt="ChargeVia" width="320" height="60" />
+      </a>
+    </div>
+  </header>
+
+  <main id="main" class="section legal">
+    <div class="container legal__inner">
+      <a class="legal__back" href="/">&laquo; Back</a>
+      <h1 class="h2">Privacy</h1>
+      <!-- DRAFT for pre-launch. Review with counsel before launch. -->
+      <p class="legal__note">Pre-launch notice. This will be expanded before any location opens.</p>
+
+      <h2>What we collect</h2>
+      <p>
+        This is an informational pre-launch site. There&rsquo;s no signup form, no accounts, no
+        tracking pixels, and no analytics, and we set no cookies beyond what our host strictly
+        requires to serve the page. If you email us, we receive your address and whatever you
+        choose to share.
+      </p>
+
+      <h2>How we use it</h2>
+      <p>
+        If you email us, we use your message only to reply. We do not sell or rent your
+        information, and we don&rsquo;t add you to any mailing list.
+      </p>
+
+      <h2>Your choices</h2>
+      <p>
+        To ask what we hold or to have it removed, contact
+        <a href="mailto:hello@chargevia.net">hello@chargevia.net</a>.
+      </p>
+
+      <p class="legal__entity">&copy; 2026 ChargeVia LLC</p>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.92); border-bottom: 1px solid var(--hairline); }
+  .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+  .nav__logo img { height: 34px; width: auto; }
+  .nav__cta { padding: 11px 22px; font-size: 0.95rem; }
+
+  .legal__inner { max-width: 720px; }
+  .legal__back { display: inline-block; margin-bottom: 22px; font-weight: 600; color: var(--muted); }
+  .legal__back:hover { color: var(--charge-orange); }
+  .legal h2 { font-size: 1.25rem; margin: 32px 0 10px; }
+  .legal p { color: var(--muted); margin-bottom: 12px; }
+  .legal a { color: var(--orange-deep); text-decoration: underline; text-underline-offset: 2px; }
+  .legal__note { font-weight: 600; color: var(--ink); }
+  .legal__entity { margin-top: 36px; font-size: 0.85rem; color: var(--muted); }
+</style>

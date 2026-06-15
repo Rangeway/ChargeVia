@@ -1,0 +1,323 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Floor items — the five things every ChargeVia always has.
+const floor = [
+  {
+    title: "Chargers that work.",
+    body: "Backed by a real uptime promise of",
+    stat: "95%",
+    bodyEnd: ". That's the whole point."
+  },
+  {
+    title: "Covered and lit.",
+    body: "A real canopy, and lighting that makes the place feel good after dark."
+  },
+  {
+    title: "Clean restrooms.",
+    body: "Every time. Not a maybe."
+  },
+  {
+    title: "Charge in seconds.",
+    body: "Tap or plug and charge. Clear price. A screen that actually responds."
+  },
+  {
+    title: "The basics, done right.",
+    body: "Squeegees that aren't gross. Air. Trash. A ledge for your coffee."
+  }
+];
+---
+
+<BaseLayout>
+  <!-- Nav -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__logo" href="/" aria-label="ChargeVia home">
+        <img src="/lockup.svg" alt="ChargeVia" width="320" height="60" />
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero band-dark">
+      <div class="hero__media" aria-hidden="true">
+        <img src="/images/cv-hero-night.jpg" alt="" width="2000" height="1116" fetchpriority="high" />
+        <div class="hero__scrim"></div>
+      </div>
+      <div class="container hero__inner">
+        <h1 class="display hero__title">The stop that<br /><span class="hl">always works.</span></h1>
+        <p class="lede lede--on-dark hero__sub">
+          Fast charging where you actually need it. Covered, clean, lit, and up when you pull
+          in. No dead screens. No drama. Charge and go.
+        </p>
+      </div>
+    </section>
+
+    <!-- Why we exist -->
+    <section class="section why">
+      <div class="container">
+        <p class="eyebrow"><span class="chev" aria-hidden="true">&raquo;</span> Public charging has a reputation.</p>
+        <p class="why__body">
+          Broken units. Dead screens. A dark parking lot and nowhere clean to stand. We built
+          the opposite. Every ChargeVia is the one that works, every time, and feels good to use
+          even though it&rsquo;s just chargers.
+        </p>
+      </div>
+    </section>
+
+    <!-- Image band -->
+    <figure class="imgband">
+      <img src="/images/cv-station-day.jpg" alt="A ChargeVia charging canopy and store, concept rendering" width="1760" height="982" loading="lazy" />
+      <figcaption class="imgband__cap">Concept rendering</figcaption>
+    </figure>
+
+    <!-- What every ChargeVia has -->
+    <section class="section band-soft what">
+      <div class="container">
+        <h2 class="h2 what__head">What you get, every time.</h2>
+        <ul class="what__grid" role="list">
+          {floor.map((f) => (
+            <li class="card">
+              <span class="card__mark" aria-hidden="true">&raquo;</span>
+              <h3 class="card__title">{f.title}</h3>
+              <p class="card__body">
+                {f.body}{f.stat && <> <span class="stat">{f.stat}</span>{f.bodyEnd}</>}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- Image band -->
+    <figure class="imgband">
+      <img src="/images/cv-urban-night.jpg" alt="A ChargeVia urban charging stop lit at night, concept rendering" width="1760" height="982" loading="lazy" />
+      <figcaption class="imgband__cap">Concept rendering</figcaption>
+    </figure>
+
+    <!-- What it's not -->
+    <section class="section band-dark whatnot">
+      <div class="container whatnot__inner">
+        <h2 class="h2">We know exactly what we are.</h2>
+        <p class="whatnot__body lede lede--on-dark">
+          ChargeVia isn&rsquo;t a lounge, and it&rsquo;s not pretending to be one. In and out is
+          the point. The win is that you barely think about us, because everything just worked.
+          And every ChargeVia is complete on its own. Not a placeholder. Not a someday. The
+          right stop for where it is.
+        </p>
+      </div>
+    </section>
+
+    <!-- Powered by Rangeway -->
+    <section class="section powered">
+      <div class="container powered__inner">
+        <h2 class="h2 powered__head">Powered by Rangeway.</h2>
+        <p class="powered__body">
+          ChargeVia runs on the same backbone as Rangeway, the premium hospitality charging
+          network. Same obsession with uptime and a stop done right. Different job. Rangeway is
+          where you linger. ChargeVia is where you don&rsquo;t have to.
+        </p>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="section band-dark closing">
+      <div class="container closing__inner">
+        <h2 class="h2">We&rsquo;re opening soon.</h2>
+        <p class="lede lede--on-dark">
+          The first ChargeVia stops are on their way &mdash; the kind you don&rsquo;t have to
+          think about, because everything just works.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a class="footer__logo" href="/" aria-label="ChargeVia home">
+        <img src="/lockup-dark.svg" alt="ChargeVia" width="320" height="60" />
+      </a>
+      <div class="footer__meta">
+        <p class="footer__powered">Powered by Rangeway</p>
+        <p class="footer__contact">
+          <span>@gochargevia</span>
+          <span aria-hidden="true">&middot;</span>
+          <a href="/">chargevia.net</a>
+        </p>
+      </div>
+      <nav class="footer__links" aria-label="Legal">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </nav>
+      <p class="footer__legal">&copy; 2026 ChargeVia LLC</p>
+    </div>
+  </footer>
+</BaseLayout>
+
+<style>
+  /* ---------- Nav ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.92);
+    -webkit-backdrop-filter: saturate(180%) blur(8px);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    min-height: 68px;
+  }
+  .nav__logo img { height: 34px; width: auto; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding-block: clamp(120px, 20vw, 220px);
+  }
+  .hero__media { position: absolute; inset: 0; z-index: -1; }
+  .hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+  .hero__scrim {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(10, 9, 8, 0.9) 0%, rgba(10, 9, 8, 0.72) 42%, rgba(10, 9, 8, 0.4) 100%),
+      linear-gradient(0deg, rgba(10, 9, 8, 0.7) 0%, rgba(10, 9, 8, 0.15) 50%);
+  }
+  .hero__title { max-width: 16ch; }
+  .hero__title .hl { color: var(--charge-orange); }
+  .hero__sub { margin-top: clamp(20px, 3vw, 30px); max-width: 46ch; }
+
+  /* ---------- Why we exist ---------- */
+  .why__body {
+    font-size: clamp(1.5rem, 3.4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    max-width: 26ch;
+  }
+
+  /* ---------- Image bands ---------- */
+  .imgband {
+    position: relative;
+    margin: 0;
+    width: 100%;
+  }
+  .imgband img {
+    width: 100%;
+    height: clamp(280px, 44vw, 580px);
+    object-fit: cover;
+    display: block;
+  }
+  .imgband__cap {
+    position: absolute;
+    right: clamp(14px, 3vw, 28px);
+    bottom: clamp(12px, 2.5vw, 22px);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.78);
+    background: rgba(17, 17, 17, 0.42);
+    padding: 5px 10px;
+    border-radius: 999px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+
+  /* ---------- What you get ---------- */
+  .what__head { max-width: 18ch; margin-bottom: clamp(36px, 5vw, 64px); }
+  .what__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(20px, 2.4vw, 32px);
+  }
+  .card {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg);
+    padding: clamp(24px, 3vw, 36px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .card__mark { font-size: 1.6rem; font-weight: 700; line-height: 1; color: var(--charge-orange); }
+  .card__title { font-size: 1.3rem; }
+  .card__body { color: var(--muted); font-size: 1.02rem; }
+  .stat {
+    font-weight: 700;
+    color: var(--orange-deep);
+    white-space: nowrap;
+  }
+
+  /* ---------- What it's not ---------- */
+  .whatnot__inner { display: grid; gap: clamp(20px, 3vw, 28px); }
+  .whatnot__body { max-width: 60ch; font-size: clamp(1.1rem, 1.8vw, 1.4rem); }
+
+  /* ---------- Powered by Rangeway ---------- */
+  .powered__inner { display: grid; gap: 22px; max-width: 760px; }
+  .powered__head { position: relative; padding-left: 22px; }
+  .powered__head::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    bottom: 0.1em;
+    width: 6px;
+    border-radius: 6px;
+    background: var(--power-purple);
+  }
+  .powered__body {
+    font-size: clamp(1.1rem, 1.7vw, 1.32rem);
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 56ch;
+  }
+
+  /* ---------- Closing ---------- */
+  .closing__inner { display: grid; gap: 18px; max-width: 620px; }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    background: var(--ink);
+    color: var(--white);
+    padding-block: clamp(48px, 6vw, 72px);
+  }
+  .footer__inner { display: grid; gap: 22px; }
+  .footer__logo img { height: 30px; width: auto; }
+  .footer__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 18px;
+  }
+  .footer__powered { font-weight: 700; letter-spacing: 0.02em; }
+  .footer__contact {
+    display: flex;
+    gap: 10px;
+    color: var(--muted-on-dark);
+    font-size: 0.95rem;
+  }
+  .footer__contact a:hover { color: var(--charge-orange); }
+  .footer__links { display: flex; gap: 22px; font-weight: 600; }
+  .footer__links a { color: var(--muted-on-dark); }
+  .footer__links a:hover { color: var(--charge-orange); }
+  .footer__legal { color: rgba(255, 255, 255, 0.5); font-size: 0.85rem; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .what__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .what__grid { grid-template-columns: 1fr; }
+  }
+</style>
