@@ -2,57 +2,45 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Terms — ChargeVia" description="Terms for using the ChargeVia pre-launch website.">
-  <header class="nav">
-    <div class="container nav__inner">
-      <a class="nav__logo" href="/" aria-label="ChargeVia home">
-        <img src="/lockup.svg" alt="ChargeVia" width="320" height="60" />
-      </a>
-    </div>
-  </header>
+<BaseLayout
+  title="Terms — ChargeVia by Rangeway"
+  description="Terms for using the ChargeVia by Rangeway website."
+>
+  <main id="main" class="legal-page">
+    <div class="legal-page__inner">
+      <a class="back-link" href="/"><span aria-hidden="true">«</span> Back home</a>
+      <p class="eyebrow">The small print</p>
+      <h1>Terms</h1>
+      <p class="legal-page__intro">
+        This website introduces ChargeVia by Rangeway. It is informational and does not sell
+        charging services or accept payments.
+      </p>
 
-  <main id="main" class="section legal">
-    <div class="container legal__inner">
-      <a class="legal__back" href="/">&laquo; Back</a>
-      <h1 class="h2">Terms</h1>
-      <!-- DRAFT for pre-launch. Review with counsel before launch. -->
-      <p class="legal__note">Pre-launch notice. This will be expanded before any location opens.</p>
-
-      <h2>This site</h2>
+      <h2>Website content</h2>
       <p>
-        chargevia.net is an informational, pre-launch website. There are no live locations,
-        pricing, or services available through it yet. Everything here is subject to change.
+        The words and concept renderings on this site describe our intended brand and experience.
+        Plans and details may change as the work develops.
+      </p>
+
+      <h2>Using the site</h2>
+      <p>
+        You may browse and share links to this site. ChargeVia names, marks, imagery, and other
+        original content may not be copied or presented as someone else&rsquo;s work.
       </p>
 
       <h2>Contact</h2>
       <p>
         Questions? Email <a href="mailto:hello@chargevia.net">hello@chargevia.net</a>. See our
-        <a href="/privacy">Privacy</a> notice for how we handle anything you send.
+        <a href="/privacy">Privacy notice</a> for information about messages you send.
       </p>
 
       <h2>No warranties</h2>
       <p>
-        This site is provided as-is, without warranties. Statements about ChargeVia describe our
-        intent and may change as we build.
+        This site is provided as-is. Statements about ChargeVia describe current intent and may
+        change.
       </p>
 
-      <p class="legal__entity">&copy; 2026 ChargeVia LLC</p>
+      <p class="legal-page__updated">Last updated: July 30, 2026</p>
     </div>
   </main>
 </BaseLayout>
-
-<style>
-  .nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.92); border-bottom: 1px solid var(--hairline); }
-  .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
-  .nav__logo img { height: 34px; width: auto; }
-  .nav__cta { padding: 11px 22px; font-size: 0.95rem; }
-
-  .legal__inner { max-width: 720px; }
-  .legal__back { display: inline-block; margin-bottom: 22px; font-weight: 600; color: var(--muted); }
-  .legal__back:hover { color: var(--charge-orange); }
-  .legal h2 { font-size: 1.25rem; margin: 32px 0 10px; }
-  .legal p { color: var(--muted); margin-bottom: 12px; }
-  .legal a { color: var(--orange-deep); text-decoration: underline; text-underline-offset: 2px; }
-  .legal__note { font-weight: 600; color: var(--ink); }
-  .legal__entity { margin-top: 36px; font-size: 0.85rem; color: var(--muted); }
-</style>

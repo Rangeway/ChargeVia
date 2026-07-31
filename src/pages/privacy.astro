@@ -2,59 +2,40 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Privacy — ChargeVia" description="How ChargeVia handles the email address you share for launch updates.">
-  <header class="nav">
-    <div class="container nav__inner">
-      <a class="nav__logo" href="/" aria-label="ChargeVia home">
-        <img src="/lockup.svg" alt="ChargeVia" width="320" height="60" />
-      </a>
-    </div>
-  </header>
-
-  <main id="main" class="section legal">
-    <div class="container legal__inner">
-      <a class="legal__back" href="/">&laquo; Back</a>
-      <h1 class="h2">Privacy</h1>
-      <!-- DRAFT for pre-launch. Review with counsel before launch. -->
-      <p class="legal__note">Pre-launch notice. This will be expanded before any location opens.</p>
-
-      <h2>What we collect</h2>
-      <p>
-        This is an informational pre-launch site. There&rsquo;s no signup form, no accounts, no
-        tracking pixels, and no analytics, and we set no cookies beyond what our host strictly
-        requires to serve the page. If you email us, we receive your address and whatever you
-        choose to share.
+<BaseLayout
+  title="Privacy — ChargeVia by Rangeway"
+  description="How ChargeVia by Rangeway handles information shared through this website."
+>
+  <main id="main" class="legal-page">
+    <div class="legal-page__inner">
+      <a class="back-link" href="/"><span aria-hidden="true">«</span> Back home</a>
+      <p class="eyebrow">The small print</p>
+      <h1>Privacy</h1>
+      <p class="legal-page__intro">
+        This is an informational website. It does not offer accounts or an email signup form.
       </p>
 
-      <h2>How we use it</h2>
+      <h2>When you contact us</h2>
       <p>
-        If you email us, we use your message only to reply. We do not sell or rent your
-        information, and we don&rsquo;t add you to any mailing list.
+        If you email us, we receive your email address and whatever information you choose to
+        include. We use it to read your message, respond, and continue the conversation you
+        started.
+      </p>
+
+      <h2>Website data</h2>
+      <p>
+        Like most websites, our hosting provider may process technical request data needed to
+        deliver and protect the site, such as an IP address, browser information, and request
+        time.
       </p>
 
       <h2>Your choices</h2>
       <p>
-        To ask what we hold or to have it removed, contact
+        To ask about information you have sent us, contact
         <a href="mailto:hello@chargevia.net">hello@chargevia.net</a>.
       </p>
 
-      <p class="legal__entity">&copy; 2026 ChargeVia LLC</p>
+      <p class="legal-page__updated">Last updated: July 30, 2026</p>
     </div>
   </main>
 </BaseLayout>
-
-<style>
-  .nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.92); border-bottom: 1px solid var(--hairline); }
-  .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
-  .nav__logo img { height: 34px; width: auto; }
-  .nav__cta { padding: 11px 22px; font-size: 0.95rem; }
-
-  .legal__inner { max-width: 720px; }
-  .legal__back { display: inline-block; margin-bottom: 22px; font-weight: 600; color: var(--muted); }
-  .legal__back:hover { color: var(--charge-orange); }
-  .legal h2 { font-size: 1.25rem; margin: 32px 0 10px; }
-  .legal p { color: var(--muted); margin-bottom: 12px; }
-  .legal a { color: var(--orange-deep); text-decoration: underline; text-underline-offset: 2px; }
-  .legal__note { font-weight: 600; color: var(--ink); }
-  .legal__entity { margin-top: 36px; font-size: 0.85rem; color: var(--muted); }
-</style>

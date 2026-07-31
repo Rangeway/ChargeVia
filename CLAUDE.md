@@ -1,20 +1,20 @@
 # CLAUDE.md — ChargeVia
 
-Pre-launch marketing one-pager for **ChargeVia**, a sub-brand of Rangeway. Astro 6 static site, deployed to the Hostinger VPS via the same `deploy-dist` pull-deploy as the other Rangeway sites (`.github/workflows/deploy.yml`). Domain: **chargevia.net**.
+Pre-launch marketing one-pager for **ChargeVia by Rangeway**, a Rangeway product and retail host-site charging format. Astro 6 static site, deployed to the Hostinger VPS via the same `deploy-dist` pull-deploy as the other Rangeway sites (`.github/workflows/deploy.yml`). Domain: **chargevia.net**.
 
 ## What ChargeVia is
 
-The reliable, no-frills, fast-charging stop — "the stop that always works." Reliability is the product (the Buc-ee's move: clean and always right, not luxury). It is **not** Rangeway: Rangeway is the premium hospitality network where you linger; ChargeVia is the plain stop where you don't have to.
+The reliable, no-frills, fast-charging stop — "the stop that always works." ChargeVia is Rangeway's customer-facing product for reliable charging at third-party host locations. Rangeway is the company and operating party; ChargeVia is the product and host-site format.
 
 ## Hard rules (from the rebuild spec)
 
 - **Do not invent facts.** No locations/addresses, no uptime %, no price per kWh, no charger counts, no launch dates. Unknowns stay as `[TOKENS]` for Zak to fill (see README table).
-- **`Powered by Rangeway` is the only Rangeway reference allowed** anywhere on the site (copy, meta, alt, comments).
+- **Approved relationship:** use `ChargeVia by Rangeway` as the primary expression. `ChargeVia - Powered by Rangeway` is the approved alternate. The header and footer may use the ChargeVia wordmark, `by`, and the Rangeway wordmark.
 - **Never include:** specific locations or "coming to [city]", pricing numbers, real uptime % (unless supplied), charger counts, Pathfinder Rewards (shelved), Altara Energy (absorbed into Rangeway), "EV gas station"/convenience-store framing as a headline, Rangeway pipeline/partners/funding, or technical jargon in headlines.
 
 ## Voice
 
-Punchy, cheeky, direct, human. Short lines and fragments are fine. ChargeVia does **not** follow Rangeway's punctuation rules (sentence-initial "And" is on-brand here). Avoid premium/luxury language (that's Rangeway's lane) and "revolutionary/disrupting/seamless".
+Punchy, cheeky, direct, human. Short lines and fragments are fine. Keep public-site copy sharp and concise. Add substance through structure and concrete details, not long paragraphs. Avoid premium/luxury language and "revolutionary/disrupting/seamless".
 
 ## Brand system (exact — see `src/styles/global.css`)
 

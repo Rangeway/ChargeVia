@@ -1,6 +1,6 @@
 # ChargeVia
 
-Pre-launch marketing site for **ChargeVia** — the reliable, no-frills fast-charging stop. A sub-brand of Rangeway. Single-page, long-scroll brand splash with concept imagery. No email capture, locations map, pricing, or accounts.
+Pre-launch marketing site for **ChargeVia by Rangeway** — the reliable, no-frills fast-charging stop. ChargeVia is a Rangeway product and retail host-site charging format. No email capture, locations map, pricing, or accounts.
 
 - **Domain:** chargevia.net
 - **Stack:** Astro 6 (static, near-zero JS)
@@ -17,12 +17,10 @@ npm run preview
 
 ## Facts on the site
 
-All copy is real — no placeholder tokens remain:
-
-- **Uptime promise:** 95% (floor card 1).
-- **Legal entity:** ChargeVia LLC (footer, `/privacy`, `/terms`). Confirm this is the exact registered name before launch.
+- **Relationship:** `ChargeVia by Rangeway` is the primary expression. `ChargeVia - Powered by Rangeway` is the approved alternate.
 - **Contact:** hello@chargevia.net.
-- **No email capture form** — this is a brand splash. If a launch signup is wanted later, wire a Buttondown form on its own ChargeVia list (separate from Rangeway).
+- **No invented operating claims:** no uptime percentage, locations, pricing, charger counts, launch dates, or unconfirmed partners.
+- **No email capture form:** if one is added later, use a separate ChargeVia Buttondown list.
 
 ## Brand assets (placeholders in `public/`)
 
@@ -38,4 +36,4 @@ Push to `main`. CI builds and force-pushes `dist/` to the `deploy-dist` branch; 
 
 ## Brand discipline
 
-`Powered by Rangeway` is the **only** Rangeway reference allowed on the site. No locations, pricing numbers, charger counts, Pathfinder Rewards, or Altara Energy. See the rebuild spec for the full guardrails.
+Use `ChargeVia by Rangeway` as the default first-use expression. `ChargeVia - Powered by Rangeway` is the approved alternate. The header and footer may use the ChargeVia wordmark, `by`, and the Rangeway wordmark. See `AGENTS.md` for the full guardrails.

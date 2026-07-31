@@ -1,323 +1,414 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-// Floor items — the five things every ChargeVia always has.
-const floor = [
+const basics = [
   {
-    title: "Chargers that work.",
-    body: "Backed by a real uptime promise of",
-    stat: "95%",
-    bodyEnd: ". That's the whole point."
+    title: "Reliable equipment.",
+    body: "Specified well. Watched closely. Maintained properly."
   },
   {
-    title: "Covered and lit.",
-    body: "A real canopy, and lighting that makes the place feel good after dark."
+    title: "Front-and-center placement.",
+    body: "Easy to find. Easy to enter."
   },
   {
-    title: "Clean restrooms.",
-    body: "Every time. Not a maybe."
+    title: "Covered and well lit.",
+    body: "A proper stop, day or night."
   },
   {
-    title: "Charge in seconds.",
-    body: "Tap or plug and charge. Clear price. A screen that actually responds."
+    title: "Easy to start.",
+    body: "Clear directions. Straightforward payment."
   },
   {
-    title: "The basics, done right.",
-    body: "Squeegees that aren't gross. Air. Trash. A ledge for your coffee."
+    title: "A useful host next door.",
+    body: "Food, restrooms, retail. The useful stuff."
   }
 ];
+
+const driverSteps = [
+  {
+    number: "01",
+    title: "Spot it.",
+    body: "Visible placement. Clear way in."
+  },
+  {
+    number: "02",
+    title: "Plug in.",
+    body: "Reliable charging. No instruction manual."
+  },
+  {
+    number: "03",
+    title: "Do something useful.",
+    body: "Food. Restroom. Retail. Your call."
+  },
+  {
+    number: "04",
+    title: "Get moving.",
+    body: "Back on the road. That was the idea."
+  }
+];
+
+const chargeViaScope = [
+  "Site planning and development",
+  "Design and construction",
+  "Equipment and procurement",
+  "Project financing",
+  "Operations and maintenance",
+  "Brand and customer support"
+];
+
+const hostScope = [
+  "A well-located site",
+  "Existing amenities",
+  "Site and utility information",
+  "Local operating knowledge",
+  "A reason for drivers to stay a while",
+  "A better use for the property"
+];
+
+const hostSteps = [
+  {
+    number: "01",
+    title: "Show us the site.",
+    body: "Where it is. What is there. Why it works."
+  },
+  {
+    number: "02",
+    title: "We do the homework.",
+    body: "Location. Power. Layout. Economics."
+  },
+  {
+    number: "03",
+    title: "Build the right fit.",
+    body: "Designed for the property. Never dropped in."
+  },
+  {
+    number: "04",
+    title: "Keep it working.",
+    body: "Rangeway runs it. Maintenance included."
+  }
+];
+
+const faqs = [
+  {
+    question: "Is ChargeVia a standalone company?",
+    answer:
+      "No. ChargeVia is a Rangeway product. Rangeway develops and operates it."
+  },
+  {
+    question: "What does a ChargeVia-built site include?",
+    answer:
+      "Reliable fast charging, visible placement, coverage, lighting, clear directions, and active maintenance. Hosts provide the amenities."
+  },
+  {
+    question: "What kinds of hosts are a fit?",
+    answer:
+      "Retailers, QSRs, convenience stores, and properties that give drivers a useful reason to stop."
+  },
+  {
+    question: "Does the host have to operate the chargers?",
+    answer:
+      "No. Rangeway handles the charging product and ongoing operations."
+  },
+  {
+    question: "Have a site in mind?",
+    answer: "Send the address and a short property description to",
+    email: "hello@chargevia.net"
+  }
+];
+
+const hostMailto =
+  "mailto:hello@chargevia.net?subject=Bring%20ChargeVia%20to%20my%20site";
 ---
 
 <BaseLayout>
-  <!-- Nav -->
-  <header class="nav">
-    <div class="container nav__inner">
-      <a class="nav__logo" href="/" aria-label="ChargeVia home">
-        <img src="/lockup.svg" alt="ChargeVia" width="320" height="60" />
-      </a>
-    </div>
-  </header>
-
   <main id="main">
-    <!-- Hero -->
-    <section class="hero band-dark">
-      <div class="hero__media" aria-hidden="true">
-        <img src="/images/cv-hero-night.jpg" alt="" width="2000" height="1116" fetchpriority="high" />
-        <div class="hero__scrim"></div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <div class="hero__copy-inner">
+          <p class="eyebrow eyebrow--on-dark">
+            <span class="double-chevron" aria-hidden="true">»</span>
+            ChargeVia by Rangeway
+          </p>
+          <h1 id="hero-title" class="hero__title">
+            The stop that<br />
+            always works<span aria-hidden="true">.</span>
+          </h1>
+          <p class="hero__lede">
+            Fast charging without the scavenger hunt. Covered. Clean. Lit. Ready.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--orange" href="#drivers">
+              See the stop <span aria-hidden="true">»</span>
+            </a>
+            <a class="text-link text-link--light" href="#hosts">
+              For site hosts <span aria-hidden="true">↘</span>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="container hero__inner">
-        <h1 class="display hero__title">The stop that<br /><span class="hl">always works.</span></h1>
-        <p class="lede lede--on-dark hero__sub">
-          Fast charging where you actually need it. Covered, clean, lit, and up when you pull
-          in. No dead screens. No drama. Charge and go.
-        </p>
+
+      <figure class="hero__figure">
+        <img
+          src="/images/cv-hero-night.jpg"
+          alt="Concept rendering of a ChargeVia charging stop illuminated at night"
+          width="2000"
+          height="1116"
+          fetchpriority="high"
+        />
+        <figcaption class="concept-label">Concept rendering</figcaption>
+      </figure>
+
+      <div class="route-line" aria-hidden="true"></div>
+    </section>
+
+    <section id="drivers" class="driver-intro section-dark" aria-labelledby="driver-title">
+      <div class="page-grid">
+        <div class="driver-intro__lead">
+          <p class="eyebrow eyebrow--on-dark">For drivers</p>
+          <h2 id="driver-title">Pull in.<br />Plug in.<br />Breathe out<span>.</span></h2>
+        </div>
+        <div class="driver-intro__copy">
+          <p class="statement">
+            Your charging stop should not require a backup plan.
+          </p>
+          <p>
+            ChargeVia pairs a purpose-built charging environment with the food, restrooms, and
+            retail already provided by the host. A normal stop. Imagine that.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Why we exist -->
-    <section class="section why">
-      <div class="container">
-        <p class="eyebrow"><span class="chev" aria-hidden="true">&raquo;</span> Public charging has a reputation.</p>
-        <p class="why__body">
-          Broken units. Dead screens. A dark parking lot and nowhere clean to stand. We built
-          the opposite. Every ChargeVia is the one that works, every time, and feels good to use
-          even though it&rsquo;s just chargers.
-        </p>
+    <section class="placement" aria-labelledby="placement-title">
+      <div class="placement__grid page-grid">
+        <div class="placement__marker" aria-hidden="true">
+          <span>Not here</span>
+          <strong>×</strong>
+        </div>
+        <div class="placement__copy">
+          <p class="eyebrow">The parking-lot problem</p>
+          <h2 id="placement-title">Charging belongs<br />where people<br />actually stop<span>.</span></h2>
+          <p class="statement statement--ink">
+            Not behind a big-box retailer. Not at the dark end of a strip mall.
+          </p>
+          <p>
+            Visible. Covered. Lit. Reliable. With something useful nearby.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Image band -->
-    <figure class="imgband">
-      <img src="/images/cv-station-day.jpg" alt="A ChargeVia charging canopy and store, concept rendering" width="1760" height="982" loading="lazy" />
-      <figcaption class="imgband__cap">Concept rendering</figcaption>
-    </figure>
+    <section class="basics" aria-labelledby="basics-title">
+      <div class="page-grid basics__grid">
+        <header class="basics__header">
+          <p class="eyebrow">Every stop starts here</p>
+          <h2 id="basics-title">The basics.<br />Done right<span>.</span></h2>
+          <p class="basics__aside">
+            A working charger.<br />
+            Imagine that.
+          </p>
+        </header>
 
-    <!-- What every ChargeVia has -->
-    <section class="section band-soft what">
-      <div class="container">
-        <h2 class="h2 what__head">What you get, every time.</h2>
-        <ul class="what__grid" role="list">
-          {floor.map((f) => (
-            <li class="card">
-              <span class="card__mark" aria-hidden="true">&raquo;</span>
-              <h3 class="card__title">{f.title}</h3>
-              <p class="card__body">
-                {f.body}{f.stat && <> <span class="stat">{f.stat}</span>{f.bodyEnd}</>}
-              </p>
+        <ol class="basics__list">
+          {basics.map((item, index) => (
+            <li class="basic">
+              <span class="basic__number" aria-hidden="true">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
+              <span class="basic__chevron" aria-hidden="true">»</span>
             </li>
           ))}
-        </ul>
+        </ol>
       </div>
     </section>
 
-    <!-- Image band -->
-    <figure class="imgband">
-      <img src="/images/cv-urban-night.jpg" alt="A ChargeVia urban charging stop lit at night, concept rendering" width="1760" height="982" loading="lazy" />
-      <figcaption class="imgband__cap">Concept rendering</figcaption>
-    </figure>
+    <section class="driver-journey" aria-labelledby="journey-title">
+      <div class="page-grid driver-journey__heading">
+        <p class="eyebrow eyebrow--on-dark">A perfectly normal charging stop</p>
+        <h2 id="journey-title">In. On. Done<span>.</span></h2>
+      </div>
+      <ol class="driver-journey__steps">
+        {driverSteps.map((step) => (
+          <li class="driver-step">
+            <span class="driver-step__number">{step.number}</span>
+            <div>
+              <h3>{step.title}</h3>
+              <p>{step.body}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
 
-    <!-- What it's not -->
-    <section class="section band-dark whatnot">
-      <div class="container whatnot__inner">
-        <h2 class="h2">We know exactly what we are.</h2>
-        <p class="whatnot__body lede lede--on-dark">
-          ChargeVia isn&rsquo;t a lounge, and it&rsquo;s not pretending to be one. In and out is
-          the point. The win is that you barely think about us, because everything just worked.
-          And every ChargeVia is complete on its own. Not a placeholder. Not a someday. The
-          right stop for where it is.
-        </p>
+    <section class="gallery" aria-labelledby="gallery-title">
+      <div class="gallery__heading page-grid">
+        <p class="eyebrow eyebrow--on-dark">Built to feel obvious</p>
+        <h2 id="gallery-title">Easy to spot.<br />Good to stop<span>.</span></h2>
+      </div>
+      <div class="gallery__images">
+        <figure class="gallery__figure gallery__figure--day">
+          <img
+            src="/images/cv-station-day.jpg"
+            alt="Concept rendering of a ChargeVia canopy and charging stop in daylight"
+            width="1760"
+            height="982"
+            loading="lazy"
+          />
+          <figcaption class="concept-label">Concept rendering</figcaption>
+        </figure>
+        <figure class="gallery__figure gallery__figure--night">
+          <img
+            src="/images/cv-urban-night.jpg"
+            alt="Concept rendering of a ChargeVia charging stop in an urban setting at night"
+            width="1760"
+            height="982"
+            loading="lazy"
+          />
+          <figcaption class="concept-label">Concept rendering</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- Powered by Rangeway -->
-    <section class="section powered">
-      <div class="container powered__inner">
-        <h2 class="h2 powered__head">Powered by Rangeway.</h2>
-        <p class="powered__body">
-          ChargeVia runs on the same backbone as Rangeway, the premium hospitality charging
-          network. Same obsession with uptime and a stop done right. Different job. Rangeway is
-          where you linger. ChargeVia is where you don&rsquo;t have to.
-        </p>
+    <section id="hosts" class="hosts" aria-labelledby="hosts-title">
+      <div class="hosts__number" aria-hidden="true">02</div>
+      <div class="page-grid hosts__grid">
+        <header>
+          <p class="eyebrow eyebrow--on-purple">For site hosts</p>
+          <h2 id="hosts-title">You bring<br />the place.<br />We build<br />the stop<span>.</span></h2>
+        </header>
+        <div class="hosts__copy">
+          <p class="statement">
+            Charging should support the host business, not become another machine to babysit.
+          </p>
+          <p>
+            Rangeway handles development, financing, construction, operations, and maintenance.
+            The host keeps doing what it does best.
+          </p>
+          <a class="button button--dark" href={hostMailto}>
+            Start a conversation <span aria-hidden="true">»</span>
+          </a>
+          <a class="hosts__email" href="mailto:hello@chargevia.net">
+            hello@chargevia.net
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- Closing -->
-    <section class="section band-dark closing">
-      <div class="container closing__inner">
-        <h2 class="h2">We&rsquo;re opening soon.</h2>
-        <p class="lede lede--on-dark">
-          The first ChargeVia stops are on their way &mdash; the kind you don&rsquo;t have to
-          think about, because everything just works.
-        </p>
+    <section class="host-model" aria-labelledby="host-model-title">
+      <div class="page-grid host-model__intro">
+        <p class="eyebrow">One site. Two jobs.</p>
+        <div>
+          <h2 id="host-model-title">A clean division<br />of labor<span>.</span></h2>
+          <p>
+            ChargeVia runs the charging. The host makes it a place. Everybody stays in their lane.
+          </p>
+        </div>
+      </div>
+      <div class="host-model__columns page-grid">
+        <section class="scope scope--chargevia" aria-labelledby="chargevia-scope-title">
+          <p class="scope__label">ChargeVia / Rangeway</p>
+          <h3 id="chargevia-scope-title">We handle the charging<span>.</span></h3>
+          <ul>
+            {chargeViaScope.map((item) => <li>{item}</li>)}
+          </ul>
+        </section>
+        <section class="scope scope--host" aria-labelledby="host-scope-title">
+          <p class="scope__label">The site host</p>
+          <h3 id="host-scope-title">You make it a place<span>.</span></h3>
+          <ul>
+            {hostScope.map((item) => <li>{item}</li>)}
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="host-process" aria-labelledby="host-process-title">
+      <div class="page-grid host-process__heading">
+        <p class="eyebrow eyebrow--on-dark">How hosting works</p>
+        <h2 id="host-process-title">From good site<br />to good stop<span>.</span></h2>
+      </div>
+      <ol class="host-process__steps page-grid">
+        {hostSteps.map((step) => (
+          <li>
+            <span>{step.number}</span>
+            <h3>{step.title}</h3>
+            <p>{step.body}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section id="rangeway" class="relationship" aria-labelledby="relationship-title">
+      <div class="page-grid relationship__grid">
+        <div>
+          <p class="eyebrow">
+            <span class="double-chevron" aria-hidden="true">»</span>
+            Built by Rangeway
+          </p>
+          <h2 id="relationship-title">Hospitality thinking.<br />Roadside discipline<span>.</span></h2>
+        </div>
+        <div class="relationship__copy">
+          <p>
+            Rangeway brings hospitality, real estate, design, construction, charging, and operating
+            experience to the same table.
+          </p>
+          <p>
+            ChargeVia turns that experience into one focused host-site format.
+          </p>
+          <p class="relationship__tag">ChargeVia by Rangeway.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="page-grid faq__grid">
+        <header>
+          <p class="eyebrow">The useful questions</p>
+          <h2 id="faq-title">Yes, there<br />are details<span>.</span></h2>
+        </header>
+        <div class="faq__list">
+          {faqs.map((item, index) => (
+            <details open={index === 0}>
+              <summary>
+                <span>{item.question}</span>
+                <span aria-hidden="true">+</span>
+              </summary>
+              <p>
+                {item.answer}
+                {item.email && (
+                  <>
+                    {" "}<a href={`mailto:${item.email}`}>{item.email}</a>.
+                  </>
+                )}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-cta" aria-labelledby="closing-title">
+      <div class="page-grid closing-cta__grid">
+        <div>
+          <p class="eyebrow eyebrow--on-dark">Have a place worth stopping?</p>
+          <h2 id="closing-title">Let’s make it<br />worth charging at<span>.</span></h2>
+        </div>
+        <div class="closing-cta__action">
+          <p>
+            Send the property. The amenities. The reason it works.
+          </p>
+          <a class="button button--orange" href={hostMailto}>
+            Show us the site <span aria-hidden="true">»</span>
+          </a>
+          <a class="closing-cta__email" href="mailto:hello@chargevia.net">
+            hello@chargevia.net
+          </a>
+        </div>
       </div>
     </section>
   </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <a class="footer__logo" href="/" aria-label="ChargeVia home">
-        <img src="/lockup-dark.svg" alt="ChargeVia" width="320" height="60" />
-      </a>
-      <div class="footer__meta">
-        <p class="footer__powered">Powered by Rangeway</p>
-        <p class="footer__contact">
-          <span>@gochargevia</span>
-          <span aria-hidden="true">&middot;</span>
-          <a href="/">chargevia.net</a>
-        </p>
-      </div>
-      <nav class="footer__links" aria-label="Legal">
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
-      </nav>
-      <p class="footer__legal">&copy; 2026 ChargeVia LLC</p>
-    </div>
-  </footer>
 </BaseLayout>
-
-<style>
-  /* ---------- Nav ---------- */
-  .nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: rgba(255, 255, 255, 0.92);
-    -webkit-backdrop-filter: saturate(180%) blur(8px);
-    backdrop-filter: saturate(180%) blur(8px);
-    border-bottom: 1px solid var(--hairline);
-  }
-  .nav__inner {
-    display: flex;
-    align-items: center;
-    min-height: 68px;
-  }
-  .nav__logo img { height: 34px; width: auto; }
-
-  /* ---------- Hero ---------- */
-  .hero {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    padding-block: clamp(120px, 20vw, 220px);
-  }
-  .hero__media { position: absolute; inset: 0; z-index: -1; }
-  .hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
-  .hero__scrim {
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(90deg, rgba(10, 9, 8, 0.9) 0%, rgba(10, 9, 8, 0.72) 42%, rgba(10, 9, 8, 0.4) 100%),
-      linear-gradient(0deg, rgba(10, 9, 8, 0.7) 0%, rgba(10, 9, 8, 0.15) 50%);
-  }
-  .hero__title { max-width: 16ch; }
-  .hero__title .hl { color: var(--charge-orange); }
-  .hero__sub { margin-top: clamp(20px, 3vw, 30px); max-width: 46ch; }
-
-  /* ---------- Why we exist ---------- */
-  .why__body {
-    font-size: clamp(1.5rem, 3.4vw, 2.6rem);
-    font-weight: 700;
-    line-height: 1.18;
-    letter-spacing: -0.02em;
-    max-width: 26ch;
-  }
-
-  /* ---------- Image bands ---------- */
-  .imgband {
-    position: relative;
-    margin: 0;
-    width: 100%;
-  }
-  .imgband img {
-    width: 100%;
-    height: clamp(280px, 44vw, 580px);
-    object-fit: cover;
-    display: block;
-  }
-  .imgband__cap {
-    position: absolute;
-    right: clamp(14px, 3vw, 28px);
-    bottom: clamp(12px, 2.5vw, 22px);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.78);
-    background: rgba(17, 17, 17, 0.42);
-    padding: 5px 10px;
-    border-radius: 999px;
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-  }
-
-  /* ---------- What you get ---------- */
-  .what__head { max-width: 18ch; margin-bottom: clamp(36px, 5vw, 64px); }
-  .what__grid {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(20px, 2.4vw, 32px);
-  }
-  .card {
-    background: var(--white);
-    border: 1px solid var(--hairline);
-    border-radius: var(--radius-lg);
-    padding: clamp(24px, 3vw, 36px);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .card__mark { font-size: 1.6rem; font-weight: 700; line-height: 1; color: var(--charge-orange); }
-  .card__title { font-size: 1.3rem; }
-  .card__body { color: var(--muted); font-size: 1.02rem; }
-  .stat {
-    font-weight: 700;
-    color: var(--orange-deep);
-    white-space: nowrap;
-  }
-
-  /* ---------- What it's not ---------- */
-  .whatnot__inner { display: grid; gap: clamp(20px, 3vw, 28px); }
-  .whatnot__body { max-width: 60ch; font-size: clamp(1.1rem, 1.8vw, 1.4rem); }
-
-  /* ---------- Powered by Rangeway ---------- */
-  .powered__inner { display: grid; gap: 22px; max-width: 760px; }
-  .powered__head { position: relative; padding-left: 22px; }
-  .powered__head::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.1em;
-    bottom: 0.1em;
-    width: 6px;
-    border-radius: 6px;
-    background: var(--power-purple);
-  }
-  .powered__body {
-    font-size: clamp(1.1rem, 1.7vw, 1.32rem);
-    color: var(--muted);
-    line-height: 1.6;
-    max-width: 56ch;
-  }
-
-  /* ---------- Closing ---------- */
-  .closing__inner { display: grid; gap: 18px; max-width: 620px; }
-
-  /* ---------- Footer ---------- */
-  .footer {
-    background: var(--ink);
-    color: var(--white);
-    padding-block: clamp(48px, 6vw, 72px);
-  }
-  .footer__inner { display: grid; gap: 22px; }
-  .footer__logo img { height: 30px; width: auto; }
-  .footer__meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 8px 18px;
-  }
-  .footer__powered { font-weight: 700; letter-spacing: 0.02em; }
-  .footer__contact {
-    display: flex;
-    gap: 10px;
-    color: var(--muted-on-dark);
-    font-size: 0.95rem;
-  }
-  .footer__contact a:hover { color: var(--charge-orange); }
-  .footer__links { display: flex; gap: 22px; font-weight: 600; }
-  .footer__links a { color: var(--muted-on-dark); }
-  .footer__links a:hover { color: var(--charge-orange); }
-  .footer__legal { color: rgba(255, 255, 255, 0.5); font-size: 0.85rem; }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 900px) {
-    .what__grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 600px) {
-    .what__grid { grid-template-columns: 1fr; }
-  }
-</style>

@@ -1,0 +1,56 @@
+---
+const hostMailto =
+  "mailto:hello@chargevia.net?subject=Bring%20ChargeVia%20to%20my%20site";
+---
+
+<header class="site-header" data-site-header>
+  <div class="shell site-header__inner">
+    <a class="brand-lockup" href="/" aria-label="ChargeVia by Rangeway, home">
+      <img class="brand-lockup__chargevia" src="/lockup-dark.svg" alt="" width="320" height="60" />
+      <span class="brand-lockup__endorsement" aria-hidden="true">
+        <span>by</span>
+        <img src="/rangeway-lockup-white.svg" alt="" width="240" height="56" />
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="/#drivers">Drivers</a>
+      <a href="/#hosts">Site hosts</a>
+      <a href="/#rangeway">About</a>
+    </nav>
+    <a class="header-cta" href={hostMailto} aria-label="Host with us">
+      <span class="header-cta__label">Host <span>with us</span></span>
+      <span aria-hidden="true">»</span>
+    </a>
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector<HTMLElement>("[data-site-header]");
+
+  if (header) {
+    let isScrolled: boolean | null = null;
+    let ticking = false;
+
+    const updateHeader = () => {
+      ticking = false;
+      const next = window.scrollY > 24;
+
+      if (next !== isScrolled) {
+        header.classList.toggle("site-header--scrolled", next);
+        isScrolled = next;
+      }
+    };
+
+    updateHeader();
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(updateHeader);
+        }
+      },
+      { passive: true }
+    );
+  }
+</script>
