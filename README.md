@@ -32,7 +32,7 @@ The approved photo-first composition uses orange photographic framing and an ins
 
 ## Deploy
 
-Push to `main` to trigger the existing deployment workflow. CI builds and force-pushes `dist/` to `deploy-dist`; the VPS pull-deploy serves it from `/var/www/ChargeVia`. Verify the production destination separately after a deployment. The October 4 redesign is being reviewed locally; its preview does not publish to chargevia.net.
+Push to `main` to trigger the existing deployment workflow. CI builds and force-pushes `dist/` to `deploy-dist`; the VPS pull-deploy serves it from `/var/www/ChargeVia`. The shared `rangeway-deploy.timer` checks every two minutes. Verify the production destination separately after a deployment. The wordmark image URLs carry a revision query because the VPS caches image files for 30 days; update that revision when replacing a wordmark.
 
 ## Brand discipline
 
