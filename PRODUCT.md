@@ -6,7 +6,7 @@ brand
 
 ## Users
 
-ChargeVia serves two co-primary website audiences:
+The website leads with drivers and gives prospective hosts a clear second narrative:
 
 1. EV drivers encountering the name for the first time, often while planning a route or judging whether an unfamiliar charging stop will be dependable, safe, and easy to use.
 2. Retailers, property owners, and prospective site hosts evaluating whether ChargeVia by Rangeway is a credible charging format for their location.
@@ -15,9 +15,9 @@ Drivers need immediate confidence that the experience will be reliable and strai
 
 ## Product Purpose
 
-The website introduces ChargeVia by Rangeway as the reliable, no-frills fast-charging stop: covered, clean, well lit, and designed to work without drama. It should establish a memorable consumer identity while showing prospective hosts that ChargeVia is a professionally operated retail charging format, not an improvised equipment installation or a standalone company.
+The website introduces ChargeVia by Rangeway as the reliable, no-frills fast-charging stop at existing businesses with useful amenities, easy access, and people who care about the property. Amenities depend on the host property; the concept does not promise a canopy or lounge at every stop. ChargeVia is a Rangeway product and host-site format. The page remains a pre-launch introduction.
 
-Success means a driver understands the promise within seconds, remembers the brand, and trusts the experience. A prospective host should understand the model at a high level and feel confident contacting `hello@chargevia.net`.
+Success means a driver understands the promise within seconds and remembers the brand. A prospective host should understand the model at a high level and have a clear route to `partners@rangeway.co`. General and legal inquiries remain at `hello@chargevia.net`.
 
 ## Brand Personality
 

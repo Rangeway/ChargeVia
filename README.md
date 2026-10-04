@@ -18,21 +18,19 @@ npm run preview
 ## Facts on the site
 
 - **Relationship:** `ChargeVia by Rangeway` is the primary expression. `ChargeVia - Powered by Rangeway` is the approved alternate.
-- **Contact:** hello@chargevia.net.
+- **Host inquiries:** partners@rangeway.co. General and legal contact: hello@chargevia.net.
 - **No invented operating claims:** no uptime percentage, locations, pricing, charger counts, launch dates, or unconfirmed partners.
 - **No email capture form:** if one is added later, use a separate ChargeVia Buttondown list.
 
-## Brand assets (placeholders in `public/`)
+## Design and assets
 
-`lockup.svg`, `lockup-dark.svg`, `icon.svg`, and `og-image.svg` are **placeholder** double-chevron marks. Replace them 1:1 with the real ChargeVia brand-kit files (same filenames). Exporting `og-image` to a 1200×630 PNG improves social-card compatibility.
+The homepage uses the checked-in ChargeVia identity and the approved integrated Rangeway vector in `public/rangeway-lockup-white.svg`. The supplied retail concept and existing night concept have responsive WebP exports in `public/images/`. `public/og-image.jpg` is the 1200×630 social image. All concepts are labeled as renderings.
+
+The approved photo-first composition uses orange photographic framing and an inset host field, with purple headings and the host contact action. See `DESIGN.md`, `PRODUCT.md`, and `docs/superpowers/specs/2026-10-04-chargevia-redesign-design.md`.
 
 ## Deploy
 
-Push to `main`. CI builds and force-pushes `dist/` to the `deploy-dist` branch; the VPS rsyncs it into `/var/www/ChargeVia`. Server-side setup still needed once (matching the other Rangeway sites):
-
-1. Nginx vhost for `chargevia.net` → `/var/www/ChargeVia` + Let's Encrypt cert.
-2. A per-repo deploy timer/service polling this repo's `deploy-dist` branch.
-3. Cloudflare DNS (DNS-only) for `chargevia.net` → VPS `72.60.71.39`.
+Push to `main` to trigger the existing deployment workflow. CI builds and force-pushes `dist/` to `deploy-dist`; the VPS pull-deploy serves it from `/var/www/ChargeVia`. Verify the production destination separately after a deployment. The October 4 redesign is being reviewed locally; its preview does not publish to chargevia.net.
 
 ## Brand discipline
 
