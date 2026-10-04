@@ -1,3 +1,6 @@
+---
+const path = Astro.url.pathname.replace(/\/$/, "");
+---
 <header class="site-header shell">
   <a class="brand-lockup" href="/" aria-label="ChargeVia by Rangeway, home">
     <img class="brand-lockup__chargevia" src="/lockup-dark.svg" alt="" width="250" height="60" />
@@ -7,7 +10,7 @@
     </span>
   </a>
   <nav class="site-nav" aria-label="Primary navigation">
-    <a class="site-nav__idea" href="/#idea">The idea</a>
-    <a class="site-nav__hosts" href="/#hosts">For hosts</a>
+    <a class="site-nav__idea" href="/the-idea" aria-current={path === "/the-idea" ? "page" : undefined}>The idea</a>
+    <a class="site-nav__hosts" href="/site-hosts" aria-current={path === "/site-hosts" ? "page" : undefined}>For site hosts</a>
   </nav>
 </header>

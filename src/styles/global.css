@@ -41,7 +41,7 @@ img { display: block; max-width: 100%; height: auto; }
 .site-nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 1rem; font-weight: 700; }
 .site-nav__idea { color: var(--charge-orange); }
 .site-nav .site-nav__hosts { color: var(--power-purple); font-size: 1.1875rem; }
-.site-nav a:hover, .idea-link:hover { text-decoration: underline; text-underline-offset: .3em; }
+.site-nav a:hover, .site-nav a[aria-current="page"], .idea-link:hover { text-decoration: underline; text-underline-offset: .3em; }
 
 /* Let the place introduce the idea. */
 .retail-concept { padding: clamp(.75rem, 2vw, 2rem); padding-bottom: .6rem; background: var(--charge-orange); color: var(--ink); }
@@ -98,8 +98,43 @@ figcaption { font-size: .75rem; line-height: 1.4; padding-top: .5rem; }
 .legal-page p a { color: var(--white); text-decoration: underline; text-decoration-color: var(--power-purple); text-underline-offset: .2em; }
 .legal-page__updated { margin-top: 2.5rem; font-size: .875rem; }
 
+/* Dedicated pages share the identity, with space for the fuller story. */
+.detail-page { padding-top: 1.75rem; }
+.detail-heading { display: grid; gap: 1.5rem; padding-bottom: 2.5rem; }
+.detail-heading h1 { color: var(--power-purple); font-size: clamp(2.125rem, 5vw, 5rem); line-height: 1.06; letter-spacing: -.04em; }
+.detail-heading__intro { font-size: 1.125rem; max-width: 39ch; }
+.concept-frame { padding: clamp(.75rem, 1.6vw, 1.5rem); padding-bottom: .6rem; }
+.concept-frame--orange { background: var(--charge-orange); color: var(--ink); }
+.concept-frame img { width: 100%; }
+.editorial-story { display: grid; gap: 2rem; padding-bottom: 3.5rem; }
+.detail-page h2 { font-size: clamp(1.875rem, 2.8vw, 2.75rem); line-height: 1.15; letter-spacing: -.025em; }
+.editorial-story__copy, .editorial-section__copy { font-size: 1.125rem; }
+.editorial-story__copy h2 { margin-bottom: 1.25rem; }
+.editorial-story__copy p + p, .editorial-section__copy p + p { margin-top: 1.1rem; }
+.editorial-section { display: grid; gap: 1.75rem; padding-bottom: 3.5rem; }
+.editorial-lead { font-size: 1.5rem; font-weight: 700; color: var(--power-purple); }
+.rangeway-note { display: grid; gap: 1.25rem; border-top: 3px solid var(--power-purple); padding-block: 2rem 3rem; }
+.rangeway-note p:not(.section-label) { max-width: 54ch; margin-top: 1.25rem; font-size: 1.125rem; }
+.rangeway-note .concept-status, .concept-status { font-size: 1rem; line-height: 1.5; }
+.rangeway-note .idea-link { margin-top: 1rem; }
+.hosts-concept { margin-bottom: 3.5rem; }
+.section-intro { font-size: 1.125rem; margin-top: 1.25rem; max-width: 31ch; }
+.property-list { margin: 0; }
+.property-list > div { border-top: 1px solid var(--power-purple); padding-block: 1.25rem; }
+.property-list > div:last-child { padding-bottom: 0; }
+.property-list dt { font-weight: 700; font-size: 1.375rem; color: var(--power-purple); }
+.property-list dd { margin: .5rem 0 0; font-size: 1.125rem; max-width: 48ch; }
+.operating-story { display: grid; gap: 1.75rem; padding-bottom: 3.5rem; }
+.operating-story__roles { display: grid; gap: 1.75rem; }
+.operating-story h3 { font-size: 1.375rem; margin: 0 0 .5rem; }
+.operating-story__roles > div { border-left: 3px solid var(--charge-orange); padding-left: 1rem; }
+.operating-story__roles > div p { font-size: 1.125rem; max-width: 48ch; }
+.operating-story .concept-status { max-width: 55ch; }
+.host-invitation { background: var(--charge-orange); color: var(--ink); padding: 1.5rem 1.25rem; display: grid; gap: 1.25rem; margin-bottom: 3rem; }
+.host-invitation p { font-size: 1.125rem; max-width: 44ch; }
+
 @media (min-width: 768px) {
-  .site-header { padding-block: 1.75rem; flex-wrap: nowrap; }
+  .site-header { padding-block: 1.75rem; }
   .brand-lockup { flex-wrap: nowrap; gap: .8rem; }
   .brand-lockup__chargevia { width: 215px; }
   .brand-lockup__endorsement { border-left: 1px solid var(--power-purple); padding-left: .85rem; gap: .5rem; }
@@ -120,5 +155,15 @@ figcaption { font-size: .75rem; line-height: 1.4; padding-top: .5rem; }
   .site-footer__main { flex-wrap: nowrap; }
   .site-footer__links { margin-left: auto; }
   .brand-lockup--footer .brand-lockup__endorsement { padding-left: .65rem; }
+  .detail-page { padding-top: 2.75rem; }
+  .detail-heading { grid-template-columns: 1.6fr 1fr; gap: 7%; align-items: end; padding-bottom: 3.25rem; }
+  .detail-heading__intro { font-size: clamp(1.125rem, 1.6vw, 1.375rem); }
+  .editorial-story { grid-template-columns: 1.4fr 1fr; gap: 7%; align-items: center; padding-bottom: 5rem; }
+  .editorial-story__copy { font-size: clamp(1.125rem, 1.5vw, 1.25rem); }
+  .editorial-section, .operating-story { grid-template-columns: 1fr 1.5fr; gap: 9%; padding-bottom: 5rem; }
+  .editorial-section__copy { font-size: clamp(1.125rem, 1.5vw, 1.25rem); }
+  .rangeway-note { grid-template-columns: 1fr 1.5fr; gap: 9%; padding-block: 2.5rem 4rem; }
+  .hosts-concept { margin-bottom: 4.5rem; }
+  .host-invitation { grid-template-columns: 1fr 1.5fr; gap: 9%; padding: 2.5rem; margin-bottom: 4rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

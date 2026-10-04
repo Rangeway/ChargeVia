@@ -2,6 +2,8 @@
 
 Pre-launch marketing site for **ChargeVia by Rangeway** — the reliable, no-frills fast-charging stop. ChargeVia is a Rangeway product and retail host-site charging format. No email capture, locations map, pricing, or accounts.
 
+Pages: `/` (introduction), `/the-idea` (driver experience and Rangeway relationship), `/site-hosts` (property fit and host inquiries), `/privacy`, and `/terms`.
+
 - **Domain:** chargevia.net
 - **Stack:** Astro 6 (static, near-zero JS)
 - **Hosting:** Hostinger VPS (Nginx), via the same GitHub Actions → `deploy-dist` pull-deploy as the other Rangeway sites.

@@ -1,6 +1,6 @@
 # AGENTS.md — ChargeVia
 
-Pre-launch marketing one-pager for **ChargeVia by Rangeway**, a Rangeway product and retail host-site charging format. Astro 6 static site, deployed to the Hostinger VPS via the same `deploy-dist` pull-deploy as the other Rangeway sites (`.github/workflows/deploy.yml`). Domain: **chargevia.net**.
+Pre-launch marketing site for **ChargeVia by Rangeway**, a Rangeway product and retail host-site charging format. The homepage links to dedicated `/the-idea` and `/site-hosts` pages, alongside the retained legal routes. Astro 6 static site, deployed to the Hostinger VPS via the same `deploy-dist` pull-deploy as the other Rangeway sites (`.github/workflows/deploy.yml`). Domain: **chargevia.net**.
 
 ## What ChargeVia is
 

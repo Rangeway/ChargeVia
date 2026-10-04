@@ -17,7 +17,9 @@ These orange and purple roles record Zak's approved revision and supersede the o
 
 The shell is capped at 1440px with fluid side gutters. Preserve the retail image's full aspect ratio. At 768px and above, use paired columns for the introduction, idea, and host story; let the night image sit slightly into the orange field. Below 768px, use one reading column, stack the host image and copy, and allow the Rangeway endorsement and navigation to wrap. Both concepts retain visible captions and honest alt text.
 
-The idea links target `/#idea`, host navigation targets `/#hosts`, and the host action opens `mailto:partners@rangeway.co`. Legal routes retain their content. There is no form, drawer menu, or entrance animation.
+The homepage contains short previews linking to `/the-idea` and `/site-hosts`. Header navigation opens those dedicated pages and underlines the current page, with `aria-current="page"`. The hosts page contains the `mailto:partners@rangeway.co` action. Legal routes retain their content. There is no form, drawer menu, or entrance animation.
+
+Dedicated pages start with purple headlines and a short introduction. The Idea page pairs the existing urban concept with the driver narrative, then explains reliability and the Rangeway relationship. The Hosts page uses the supplied retail concept, property-fit descriptions, intended operating roles, and an orange contact invitation. At narrow widths, all editorial pairs stack in reading order.
 
 ## Accessibility
 

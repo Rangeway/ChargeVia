@@ -15,6 +15,8 @@ Drivers need immediate confidence that the experience will be reliable and strai
 
 ## Product Purpose
 
+The site has three marketing pages: a driver-first homepage with short previews, `/the-idea` for the intended experience and Rangeway relationship, and `/site-hosts` for property fit, intended roles, and host inquiries. Privacy and terms remain separate legal pages. Zak approved this expansion after reviewing the October 4 landing-page preview.
+
 The website introduces ChargeVia by Rangeway as the reliable, no-frills fast-charging stop at existing businesses with useful amenities, easy access, and people who care about the property. Amenities depend on the host property; the concept does not promise a canopy or lounge at every stop. ChargeVia is a Rangeway product and host-site format. The page remains a pre-launch introduction.
 
 Success means a driver understands the promise within seconds and remembers the brand. A prospective host should understand the model at a high level and have a clear route to `partners@rangeway.co`. General and legal inquiries remain at `hello@chargevia.net`.
