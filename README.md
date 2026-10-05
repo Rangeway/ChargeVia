@@ -26,13 +26,13 @@ npm run preview
 
 ## Design and assets
 
-The homepage uses the checked-in ChargeVia identity and the approved integrated Rangeway vector in `public/rangeway-lockup-white.svg`. The supplied retail concept and existing night concept have responsive WebP exports in `public/images/`. `public/og-image.jpg` is the 1200×630 social image. All concepts are labeled as renderings.
+The homepage uses the checked-in ChargeVia identity, rendered inline by `src/components/Lockup.astro` so its lettering uses Outfit, and the approved integrated Rangeway vector in `public/rangeway-lockup-white.svg`. The supplied retail concept and existing night and urban concepts have responsive WebP exports in `public/images/`. `public/og-image.jpg` is the 1200×630 social image. All concepts are labeled as renderings.
 
-The approved photo-first composition uses orange photographic framing and an inset host field, with purple headings and the host contact action. See `DESIGN.md`, `PRODUCT.md`, and `docs/superpowers/specs/2026-10-04-chargevia-redesign-design.md`.
+The approved Claude Design composition uses a split headline/photo hero with orange and purple chevrons, purple homepage typography, compact editorial sections, and an inset orange host invitation. See `DESIGN.md` and `PRODUCT.md`. The earlier direction is recorded in `docs/superpowers/specs/2026-10-04-chargevia-redesign-design.md`.
 
 ## Deploy
 
-Push to `main` to trigger the existing deployment workflow. CI builds and force-pushes `dist/` to `deploy-dist`; the VPS pull-deploy serves it from `/var/www/ChargeVia`. The shared `rangeway-deploy.timer` checks every two minutes. Verify the production destination separately after a deployment. The wordmark image URLs carry a revision query because the VPS caches image files for 30 days; update that revision when replacing a wordmark.
+Push to `main` to trigger the existing deployment workflow. CI builds and force-pushes `dist/` to `deploy-dist`; the VPS pull-deploy serves it from `/var/www/ChargeVia`. The shared `rangeway-deploy.timer` checks every two minutes. Verify the production destination separately after a deployment. The Rangeway wordmark image URL carries a revision query because the VPS caches image files for 30 days; update that revision when replacing it. The ChargeVia identity is inline and deploys with each page.
 
 ## Brand discipline
 

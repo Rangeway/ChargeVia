@@ -1,0 +1,12 @@
+---
+import Lockup from './Lockup.astro';
+interface Props { id: string; size?: 'header' | 'footer'; }
+const { id, size = 'header' } = Astro.props;
+const w = size === 'header' ? 196 : 156;
+---
+<a class:list={['brand', `brand--${size}`]} href="/" aria-label="ChargeVia by Rangeway, home">
+  <Lockup id={id} width={w} />
+  <span class="brand__by" aria-hidden="true">
+    by <img src="/rangeway-lockup-white.svg?v=20261004" alt="" width="332" height="72" loading={size === 'footer' ? 'lazy' : undefined} />
+  </span>
+</a>

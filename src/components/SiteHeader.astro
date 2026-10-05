@@ -1,16 +1,12 @@
 ---
-const path = Astro.url.pathname.replace(/\/$/, "");
+import Brand from './Brand.astro';
+interface Props { current?: 'home' | 'idea' | 'hosts' | 'legal'; }
+const { current = 'home' } = Astro.props;
 ---
-<header class="site-header shell">
-  <a class="brand-lockup" href="/" aria-label="ChargeVia by Rangeway, home">
-    <img class="brand-lockup__chargevia" src="/lockup-dark.svg?v=20261004" alt="" width="250" height="60" />
-    <span class="brand-lockup__endorsement" aria-hidden="true">
-      <span>by</span>
-      <img src="/rangeway-lockup-white.svg?v=20261004" alt="" width="332" height="72" />
-    </span>
-  </a>
+<header class="site-header wrap">
+  <Brand id="h" size="header" />
   <nav class="site-nav" aria-label="Primary navigation">
-    <a class="site-nav__idea" href="/the-idea" aria-current={path === "/the-idea" ? "page" : undefined}>The idea</a>
-    <a class="site-nav__hosts" href="/site-hosts" aria-current={path === "/site-hosts" ? "page" : undefined}>For site hosts</a>
+    <a class="site-nav__link" href="/the-idea/" aria-current={current === 'idea' ? 'page' : undefined}>The idea</a>
+    <a class="site-nav__cta" href="/site-hosts/" aria-current={current === 'hosts' ? 'page' : undefined}>For site hosts</a>
   </nav>
 </header>

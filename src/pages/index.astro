@@ -1,58 +1,83 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
 ---
-
-<BaseLayout>
-  <main id="main" class="home shell">
-    <section class="introduction" aria-labelledby="hero-title">
-      <figure class="retail-concept">
+<BaseLayout
+  current="home"
+  title="ChargeVia by Rangeway | The stop that always works."
+  description="ChargeVia by Rangeway is bringing fast charging to existing businesses with useful amenities, easy access, and people who care."
+>
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero__copy">
+      <h1 id="hero-title">Fast charging at places worth stopping.</h1>
+      <p class="lede">ChargeVia by Rangeway is bringing fast charging to existing businesses with easy access, useful amenities, and people who look after the place.</p>
+      <div class="actions">
+        <Button href="/the-idea/">See the idea</Button>
+        <a class="textlink" href="/site-hosts/">Have a property in mind?</a>
+      </div>
+    </div>
+    <figure class="hero__figure">
+      <div class="hero__frame">
         <img
           src="/images/cv-retail-1672.webp"
           srcset="/images/cv-retail-640.webp 640w, /images/cv-retail-960.webp 960w, /images/cv-retail-1672.webp 1672w"
-          sizes="(min-width: 1500px) 1376px, (min-width: 768px) calc(100vw - 112px), calc(100vw - 56px)"
+          sizes="(min-width: 1320px) 720px, (min-width: 980px) 55vw, calc(100vw - 40px)"
           alt="Concept rendering of electric vehicles charging beside a retail storefront with outdoor seating"
-          width="1672" height="941" fetchpriority="high"
+          width="1672"
+          height="941"
+          fetchpriority="high"
         />
-        <figcaption>Concept rendering</figcaption>
-      </figure>
-      <div class="intro-copy">
-        <h1 id="hero-title">Charge where<br />life happens.</h1>
-        <div class="intro-copy__aside">
-          <p>Fast charging at places<br class="desktop-break" /> worth stopping.</p>
-          <a class="idea-link" href="/the-idea">Meet ChargeVia <span aria-hidden="true">»</span></a>
+      </div>
+      <figcaption>Concept rendering</figcaption>
+    </figure>
+  </section>
+
+  <section class="wrap home-place" aria-labelledby="place-title">
+    <h2 id="place-title" class="h2">A good charging stop starts with a good place.</h2>
+    <div class="home-place__copy">
+      <p class="lede">We’re looking for properties with useful amenities, easy access, and people who look after the place.</p>
+      <dl class="home-place__details">
+        <div><dt>Easy to reach</dt><dd>A straightforward way in, and room to move around.</dd></div>
+        <div><dt>Worth the time</dt><dd>A coffee, food, a restroom, or a useful break. The mix depends on the property.</dd></div>
+        <div><dt>Looked after</dt><dd>A maintained property and a host who cares about visitors.</dd></div>
+      </dl>
+      <a class="textlink" href="/the-idea/">Read the idea <span aria-hidden="true">»</span></a>
+    </div>
+  </section>
+
+  <section class="wrap section works" aria-labelledby="works-title">
+    <figure class="figure figure--16x9 works__figure">
+      <img
+        src="/images/cv-night-1000.webp"
+        srcset="/images/cv-night-640.webp 640w, /images/cv-night-1000.webp 1000w"
+        sizes="(min-width: 1320px) 640px, (min-width: 900px) 50vw, calc(100vw - 40px)"
+        alt="Concept rendering of a charging stop beneath an illuminated canopy at night"
+        width="1000"
+        height="558"
+        loading="lazy"
+        decoding="async"
+      />
+      <figcaption>Concept rendering</figcaption>
+    </figure>
+    <div class="works__copy">
+      <h2 id="works-title" class="h2 purple">The stop that always works.</h2>
+      <p class="body">That is the standard we are building toward: charging you can count on, a property that is cared for, and a useful way to spend the stop.</p>
+      <p class="body">Rangeway would develop and manage the charging. The host keeps running the business its customers already know.</p>
+    </div>
+  </section>
+
+  <section class="wrap home-hosts" aria-labelledby="hosts-title">
+    <div class="home-hosts__inner split split--end">
+      <div class="cta__head">
+        <p class="kicker">For site hosts</p>
+        <h2 id="hosts-title" class="display">Have a place worth stopping?</h2>
+      </div>
+      <div class="cta__body">
+        <p class="lede" style="max-width: 38ch">If you own or run a retail, fuel, or hospitality property that drivers already like to visit, we would like to hear about it.</p>
+        <div class="actions">
+          <Button href="/site-hosts/" variant="ink">Explore hosting</Button>
         </div>
       </div>
-    </section>
-    <section id="idea" class="idea" aria-labelledby="idea-title">
-      <header class="idea__heading">
-        <p class="section-label">The idea</p>
-        <h2 id="idea-title">A good charging stop<br class="desktop-break" /> starts with a good place.</h2>
-      </header>
-      <div class="idea__copy">
-        <p>ChargeVia by Rangeway is being developed for existing businesses with useful amenities,
-          easy access, and people who care about the property.</p>
-        <a class="idea-link" href="/the-idea">Explore the idea <span aria-hidden="true">»</span></a>
-      </div>
-    </section>
-    <section id="hosts" class="host-story" aria-labelledby="hosts-title">
-      <figure class="night-concept">
-        <img src="/images/cv-night-1000.webp"
-          srcset="/images/cv-night-640.webp 640w, /images/cv-night-1000.webp 1000w"
-          sizes="(min-width: 1500px) 600px, (min-width: 768px) 44vw, calc(100vw - 32px)"
-          alt="Concept rendering of a charging stop beneath an illuminated canopy at night"
-          width="1000" height="558" loading="lazy" decoding="async"
-        />
-        <figcaption>Concept rendering</figcaption>
-      </figure>
-      <div class="host-story__copy">
-        <p class="section-label">For site hosts</p>
-        <h2 id="hosts-title">A place worth stopping?</h2>
-        <p class="host-story__description">Rangeway would develop and manage the charging operation.
-          You keep running the business your customers know.</p>
-        <a class="host-contact" href="/site-hosts">
-          <span>Explore hosting</span><span aria-hidden="true">»</span>
-        </a>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </BaseLayout>

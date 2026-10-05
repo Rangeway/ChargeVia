@@ -1,54 +1,65 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
 ---
+<BaseLayout
+  current="idea"
+  title="The idea | ChargeVia by Rangeway"
+  description="Meet the idea behind ChargeVia by Rangeway: reliable fast charging at existing businesses with useful amenities and care for visitors."
+>
+  <div class="title wrap">
+    <h1>Charging that fits the stop you would make anyway.</h1>
+    <div class="title__aside">
+      <p class="lede">ChargeVia by Rangeway is being developed to bring fast charging to places that already give you a reason to stop.</p>
+    </div>
+  </div>
+  <div class="wrap title-figure">
+    <figure class="figure figure--wide">
+      <img
+        src="/images/cv-urban-1440.webp"
+        srcset="/images/cv-urban-640.webp 640w, /images/cv-urban-1440.webp 1440w"
+        sizes="(min-width: 1320px) 1192px, calc(100vw - 40px)"
+        alt="Concept rendering of a vehicle charging beside a storefront in an urban setting"
+        width="1440"
+        height="803"
+        fetchpriority="high"
+        style="object-position: center 55%"
+      />
+      <figcaption>Concept rendering. Amenities and layouts would vary by property.</figcaption>
+    </figure>
+  </div>
 
-<BaseLayout title="The idea | ChargeVia by Rangeway"
-  description="Meet the idea behind ChargeVia by Rangeway: reliable fast charging at existing businesses with useful amenities and care for visitors.">
-  <main id="main" class="detail-page shell">
-    <header class="detail-heading">
-      <div>
-        <p class="section-label">The idea</p>
-        <h1>Good charging.<br />A useful stop.</h1>
+  <section class="band--white" aria-labelledby="count-title">
+    <div class="wrap section split">
+      <h2 id="count-title" class="h2 split__head">Make the stop count.</h2>
+      <div class="split__body">
+        <p class="lead">A coffee. Lunch. A restroom break. Make the stop useful.</p>
+        <p class="body">That is why we start with the property. We are looking for existing retail, fuel, and hospitality businesses with easy access, useful amenities, and people who care about the place.</p>
+        <p class="body">Every property is different. One might have a market and a patio, and another a coffee counter and clean restrooms. What each one offers, and when it is open, depends on the host.</p>
       </div>
-      <p class="detail-heading__intro">ChargeVia by Rangeway is being developed to bring reliable fast charging to places that already give you a reason to stop.</p>
-    </header>
+    </div>
+  </section>
 
-    <section class="editorial-story" aria-labelledby="stop-title">
-      <figure class="concept-frame concept-frame--orange">
-        <img src="/images/cv-urban-1440.webp"
-          srcset="/images/cv-urban-640.webp 640w, /images/cv-urban-1440.webp 1440w"
-          sizes="(min-width: 768px) 55vw, calc(100vw - 56px)"
-          alt="Concept rendering of a vehicle charging beside a storefront in an urban setting"
-          width="1440" height="803" fetchpriority="high" />
-        <figcaption>Concept rendering. Amenities and layouts would vary by property.</figcaption>
-      </figure>
-      <div class="editorial-story__copy">
-        <h2 id="stop-title">Make the stop count.</h2>
-        <p>A coffee. Lunch. A restroom break. Charging should fit into the things you already need to do.</p>
-        <p>We’re looking for existing retail, fuel, and hospitality properties with useful amenities, easy access, and people who care about the place.</p>
-      </div>
-    </section>
+  <section class="wrap section split" aria-labelledby="works-title">
+    <h2 id="works-title" class="display orange split__head" style="max-width: 11ch">The stop that always works.</h2>
+    <div class="split__body">
+      <p class="lead">That is the standard we are building toward.</p>
+      <p class="body">It means charging you can count on, a property that is cared for, and a useful way to spend the time.</p>
+      <p class="body">Each location would have its own character. The care behind the charging experience should feel familiar wherever you stop.</p>
+    </div>
+  </section>
 
-    <section class="editorial-section" aria-labelledby="reliable-title">
-      <header>
-        <p class="section-label">The promise we’re building toward</p>
-        <h2 id="reliable-title">The stop that<br />always works.</h2>
-      </header>
-      <div class="editorial-section__copy">
-        <p class="editorial-lead">Reliability is the point.</p>
-        <p>The aim is straightforward: charging you can count on, a property that’s cared for, and a useful way to spend the stop.</p>
-        <p>Each location would have its own character. The care behind the charging experience should feel familiar.</p>
+  <section class="band--purple" aria-labelledby="rangeway-title">
+    <div class="wrap section--tight split">
+      <div class="split__head col" style="gap: 14px">
+        <p class="kicker">By Rangeway</p>
+        <h2 id="rangeway-title" class="h2" style="max-width: 14ch">A charging stop with people behind it.</h2>
       </div>
-    </section>
-
-    <section class="rangeway-note" aria-labelledby="rangeway-title">
-      <p class="section-label">By Rangeway</p>
-      <div>
-        <h2 id="rangeway-title">A charging stop with<br />people behind it.</h2>
-        <p>ChargeVia is Rangeway’s host-site charging format. Rangeway would develop and manage the charging operation, alongside the businesses that make each stop useful.</p>
-        <p class="concept-status">ChargeVia is in development. These images show the concept, rather than operating locations.</p>
-        <a class="idea-link" href="/site-hosts">Have a place in mind? <span aria-hidden="true">»</span></a>
+      <div class="split__body">
+        <p class="body">ChargeVia is Rangeway&rsquo;s charging format for existing businesses. Rangeway would develop and manage the charging, alongside the hosts whose businesses make each stop useful.</p>
+        <p class="body">ChargeVia is in development. The images on this site show the concept, not operating locations.</p>
+        <Button href="/site-hosts/" variant="white">Have a place in mind?</Button>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </BaseLayout>

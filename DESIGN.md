@@ -1,30 +1,30 @@
 # ChargeVia design
 
-The approved October 4, 2026 direction leads with the supplied retail concept, followed by a short driver introduction and a clear host invitation. A continuous ink background, asymmetric text, and an inset orange host field provide the rhythm. Avoid feature-card grids, repeated slogan bands, and oversized rounded panels.
+Zak approved the Claude Design export on October 4, 2026 with three refinements: integrate more purple into the homepage, simplify its middle and closing sections, and remove the unsupported charging-time comparison. This supersedes the earlier photo-first landing-page composition while preserving the three-page architecture.
 
 ## Identity and palette
 
-- Use the actual ChargeVia wordmark followed by `by` and the approved integrated Rangeway vector.
-- Ink `#111111`: page background and text on color fields.
-- White `#FFFFFF`: body text on ink.
-- Charge Orange `#FF6B35`: photograph mat, idea label, host field.
-- Power Purple `#8B6BB4`: headline, navigation, idea link, host contact action.
-- Outfit 700 headings and emphasized links; Outfit 400 body, with Arial fallback and display=swap.
+- Use the supplied ChargeVia identity, `by`, and the approved integrated Rangeway wordmark.
+- Ink `#111111` forms the main page background; white `#FFFFFF` supplies body text.
+- Charge Orange `#FF6B35` supplies the hero chevron, actions, and host invitation.
+- Power Purple `#8B6BB4` supplies the second hero chevron, homepage headline, section labels, links, and footer tagline.
+- Deep Purple `#7B5BA4` supplies the Idea page's Rangeway field, with white text.
+- Outfit 700 headings, 600 leads, and 400 body, with Arial fallback and display=swap.
 
-These orange and purple roles record Zak's approved revision and supersede the older purple-sparingly treatment for this page.
+These orange and purple roles record Zak's approved revision and supersede the older purple-sparingly treatment.
 
 ## Layout and behavior
 
-The shell is capped at 1440px with fluid side gutters. Preserve the retail image's full aspect ratio. At 768px and above, use paired columns for the introduction, idea, and host story; let the night image sit slightly into the orange field. Below 768px, use one reading column, stack the host image and copy, and allow the Rangeway endorsement and navigation to wrap. Both concepts retain visible captions and honest alt text.
+The shell is capped at 1320px with fluid side gutters. The homepage opens with paired copy and the supplied retail concept, framed by the ChargeVia chevron. A compact editorial section describes a useful property, followed by the night concept and the reliability standard. An inset orange host invitation closes the page. Avoid repeating feature-card grids and giant slogan bands on the homepage.
 
-The homepage contains short previews linking to `/the-idea` and `/site-hosts`. Header navigation opens those dedicated pages and underlines the current page, with `aria-current="page"`. The hosts page contains the `mailto:partners@rangeway.co` action. Legal routes retain their content. There is no form, drawer menu, or entrance animation.
+`/the-idea` explains the intended driver experience, property-dependent amenities, reliability standard, and Rangeway relationship. `/site-hosts` describes property fit, intended operating roles, and a short inquiry checklist linking to `partners@rangeway.co`. These pages retain the export's white editorial sections and color fields. Privacy and terms retain their legal content.
 
-Dedicated pages start with purple headlines and a short introduction. The Idea page pairs the existing urban concept with the driver narrative, then explains reliability and the Rangeway relationship. The Hosts page uses the supplied retail concept, property-fit descriptions, intended operating roles, and an orange contact invitation. At narrow widths, all editorial pairs stack in reading order.
+Below desktop breakpoints, pairs stack in reading order and the navigation wraps. All concept images retain visible captions and honest alt text. There is no capture form, drawer menu, or entrance animation.
 
 ## Accessibility
 
-Purple against ink has approximately 4.37:1 contrast: use it only for large text or bold text at least 19px. White against ink and ink against orange pass normal-text AA. The purple contact action uses bold large ink text. Legal body links remain white with a purple underline. Provide visible focus, a keyboard skip link, 44px link targets, and reduced-motion support.
+Purple against ink has approximately 4.37:1 contrast: use it only for large text or bold text at least 19px. White against ink, ink against orange, and white against deep purple pass normal-text AA. Orange buttons use ink text. Provide visible keyboard focus, a skip link, and 44px link targets. Focus outlines on orange fields use ink.
 
 ## Verification
 
-The built page was reviewed at 360px, 768px, and 1440px. The supplied image, both wordmarks, host composition, captions, anchors, email target, and legal routes were checked in the actual preview. Astro checks, the production build, and whitespace checks passed. A Lighthouse score has not been measured for this preview; the 95+ mobile target remains unverified.
+The production build was reviewed in a real browser on desktop and at 360px. Both dedicated pages, image loading, navigation, host inquiry targets, wordmarks, and mobile overflow were checked. Astro source checks, the build, and whitespace checks passed. A Lighthouse score has not been measured; the 95+ mobile target remains unverified.

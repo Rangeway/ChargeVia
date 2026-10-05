@@ -1,36 +1,28 @@
 ---
-import SiteFooter from "../components/SiteFooter.astro";
-import SiteHeader from "../components/SiteHeader.astro";
-import "../styles/global.css";
+import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 
 interface Props {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
+  current?: 'home' | 'idea' | 'hosts' | 'legal';
 }
-
-const {
-  title = "ChargeVia by Rangeway | The stop that always works.",
-  description = "ChargeVia by Rangeway is bringing fast charging to existing businesses with useful amenities, easy access, and people who care."
-} = Astro.props;
-
-const ogImage = new URL("/og-image.jpg", Astro.site).href;
+const { title, description, current = 'home' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL('/og-image.jpg', Astro.site).href;
 ---
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#111111" />
-
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <link rel="apple-touch-icon" href="/icon.svg" />
-
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ChargeVia by Rangeway" />
     <meta property="og:title" content={title} />
@@ -40,23 +32,21 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Concept rendering of electric vehicles charging beside a retail storefront" />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" />
+    <slot name="head" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <SiteHeader />
-    <slot />
+    <SiteHeader current={current} />
+    <main id="main">
+      <slot />
+    </main>
     <SiteFooter />
   </body>
 </html>

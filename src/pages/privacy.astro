@@ -1,41 +1,22 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
 <BaseLayout
-  title="Privacy — ChargeVia by Rangeway"
+  current="legal"
+  title="Privacy | ChargeVia by Rangeway"
   description="How ChargeVia by Rangeway handles information shared through this website."
 >
-  <main id="main" class="legal-page">
-    <div class="legal-page__inner">
-      <a class="back-link" href="/"><span aria-hidden="true">«</span> Back home</a>
-      <p class="eyebrow">The small print</p>
+  <div class="wrap legal">
+    <div class="legal__inner">
       <h1>Privacy</h1>
-      <p class="legal-page__intro">
-        This is an informational website. It does not offer accounts or an email signup form.
-      </p>
-
+      <p class="lede">This is an informational website. It does not offer accounts or an email signup form.</p>
       <h2>When you contact us</h2>
-      <p>
-        If you email us, we receive your email address and whatever information you choose to
-        include. We use it to read your message, respond, and continue the conversation you
-        started.
-      </p>
-
+      <p class="body">If you email us, we receive your email address and whatever information you choose to include. We use it to read your message, respond, and continue the conversation you started.</p>
       <h2>Website data</h2>
-      <p>
-        Like most websites, our hosting provider may process technical request data needed to
-        deliver and protect the site, such as an IP address, browser information, and request
-        time.
-      </p>
-
+      <p class="body">Like most websites, our hosting provider may process technical request data needed to deliver and protect the site, such as an IP address, browser information, and request time.</p>
       <h2>Your choices</h2>
-      <p>
-        To ask about information you have sent us, contact
-        <a href="mailto:hello@chargevia.net">hello@chargevia.net</a>.
-      </p>
-
-      <p class="legal-page__updated">Last updated: July 30, 2026</p>
+      <p class="body">To ask about information you have sent us, contact <a href="mailto:hello@chargevia.net">hello@chargevia.net</a>.</p>
+      <p class="legal__updated">Last updated: July 30, 2026</p>
     </div>
-  </main>
+  </div>
 </BaseLayout>

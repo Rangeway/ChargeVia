@@ -1,17 +1,21 @@
-<footer class="site-footer shell">
-  <div class="site-footer__main">
-    <a class="brand-lockup brand-lockup--footer" href="/" aria-label="ChargeVia by Rangeway, home">
-      <img class="brand-lockup__chargevia" src="/lockup-dark.svg?v=20261004" alt="" width="250" height="60" loading="lazy" />
-      <span class="brand-lockup__endorsement" aria-hidden="true">
-        <span>by</span>
-        <img src="/rangeway-lockup-white.svg?v=20261004" alt="" width="332" height="72" loading="lazy" />
-      </span>
-    </a>
-    <nav class="site-footer__links" aria-label="Footer navigation">
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-    </nav>
-    <p class="site-footer__tagline">The stop that always works.</p>
+---
+import Brand from './Brand.astro';
+const year = 2026;
+---
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__row">
+      <Brand id="f" size="footer" />
+      <nav class="site-footer__links" aria-label="Footer navigation">
+        <a href="/the-idea/">The idea</a>
+        <a href="/site-hosts/">For site hosts</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+    </div>
+    <div class="site-footer__row site-footer__row--base">
+      <p class="site-footer__tagline">The stop that always works.</p>
+      <p class="site-footer__legal">ChargeVia by Rangeway is in development. Images on this site are concept renderings, not operating locations. &copy; {year} ChargeVia by Rangeway.</p>
+    </div>
   </div>
-  <p class="site-footer__legal">&copy; 2026 ChargeVia by Rangeway.</p>
 </footer>
