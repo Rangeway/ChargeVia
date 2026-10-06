@@ -343,7 +343,7 @@ a:focus-visible { outline: 3px solid var(--power-purple); outline-offset: 4px; b
 .home-place__details dd { margin: 4px 0 0; font-size: 17px; line-height: 1.5; max-width: 48ch; }
 .home-place .textlink { color: var(--power-purple); font-size: 19px; font-weight: 700; gap: 8px; }
 .home-hosts { padding-bottom: clamp(40px, 5vw, 64px); }
-.home-hosts__inner { background: var(--charge-orange); color: var(--ink); padding: clamp(24px, 3vw, 40px); gap: 24px 40px; }
+.home-hosts__inner { background: var(--charge-orange); color: var(--ink); padding: clamp(24px, 3vw, 40px); gap: 24px 40px; align-items: center; }
 .home-hosts a:focus-visible { outline-color: var(--ink); }
 .home-hosts .display { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.08; }
 .home-hosts .cta__head { flex-basis: 340px; gap: 12px; }
